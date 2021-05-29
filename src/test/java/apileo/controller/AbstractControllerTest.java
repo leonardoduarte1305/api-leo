@@ -3,13 +3,13 @@ package apileo.controller;
 import org.junit.Assert;
 import org.junit.Test;
 
-import apileo.controller.AbstractController;
+import apileo.controller.RootController;
 
 public class AbstractControllerTest {
 
 	@Test
 	public void testaHealth() {
-		AbstractController controller = new AbstractController();
+		RootController controller = new RootController();
 		Assert.assertNotNull(controller.health());
 	}
 

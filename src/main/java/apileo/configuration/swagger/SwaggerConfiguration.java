@@ -25,7 +25,7 @@ public class SwaggerConfiguration {
 		return new Docket(DocumentationType.SWAGGER_2) //
 				.select() //
 				.apis(RequestHandlerSelectors //
-						.basePackage("com.BackendJuniorLeonardoDuarte")) //
+						.basePackage("apileo")) //
 				.build() //
 				.ignoredParameterTypes(Gestor.class) // Não mostar Gestor, pois nele há a senha do gestor
 				.globalOperationParameters(Arrays.asList( //

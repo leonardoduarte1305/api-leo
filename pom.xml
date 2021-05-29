@@ -12,19 +12,13 @@
 	</parent>
 
 	<properties>
-		<java.version> 1.8 </java.version>
-		<project.build.sourceEncoding> UTF-8 </project.build.sourceEncoding>
-		<start-class>
-			com.BackendJuniorLeonardoDuarte.BackendJuniorLeonardoDuarteApplication
-		</start-class>
-		<docker.image.name> backend-spring/leoduarte </docker.image.name>
-		<docker.image.tag> latest </docker.image.tag>
+		<java.version>11</java.version>
 	</properties>
 
-	<groupId>com.BackendJuniorLeonardoDuarte</groupId>
-	<artifactId>backendjuniorleonardoduarte</artifactId>
+	<groupId>com.api-leo</groupId>
+	<artifactId>api-leo</artifactId>
 	<version>2.0.3-Final</version>
-	<name>BackendJuniorLeonardoDuarte</name>
+	<name>api-leo</name>
 	<description>Desafio Java Back</description>
 
 
@@ -32,7 +26,6 @@
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
-			<version>3.6.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -81,13 +74,11 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
-			<version>3.10.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -99,11 +90,8 @@
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>spring-mock-mvc</artifactId>
-			<version>4.3.3</version>
 			<scope>test</scope>
 		</dependency>
-
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>

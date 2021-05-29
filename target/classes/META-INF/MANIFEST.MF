@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk-Spec: 15
-Implementation-Title: BackendJuniorLeonardoDuarte
-Implementation-Version: 2.0.3-Final
-Main-Class: com.BackendJuniorLeonardoDuarte.BackendJuniorLeonardoDuarteA
- pplication
-Created-By: Maven Integration for Eclipse
-

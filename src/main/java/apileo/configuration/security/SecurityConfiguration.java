@@ -48,7 +48,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests() //
 
 				// GERAIS
-				.antMatchers(HttpMethod.GET, "/health").permitAll() //
+				.antMatchers(HttpMethod.GET, "/").permitAll() //
 				.antMatchers(HttpMethod.POST, "/auth").permitAll() //
 
 				// COLABORADOR
