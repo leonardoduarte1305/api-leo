@@ -5,6 +5,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -49,7 +51,7 @@ public class SetorController {
 	@ApiOperation(value = "Lista os setores cadastrados.", //
 			notes = "Não recebe parâmetros.", //
 			produces = "application/json")
-//	@Cacheable(value = "listaSetores")
+	@Cacheable(value = "listaSetores")
 	@GetMapping("/todos")
 	public List<Setor> pesquisarTodosOsSetores() {
 		return setorRepository.findAll();
@@ -59,7 +61,7 @@ public class SetorController {
 			notes = "Recebe no body da requisição uma representação" //
 					+ " Json do objeto SetorDtoEntrada", //
 			response = SetorDtoSaida.class)
-//	@CacheEvict(allEntries = true, value = "listaSetores")
+	@CacheEvict(allEntries = true, value = "listaSetores")
 	@Transactional
 	@PostMapping
 	public ResponseEntity<SetorDtoSaida> cadastrarSetor( //
@@ -71,7 +73,7 @@ public class SetorController {
 	@ApiOperation(value = "Altera os dados de um setor.", //
 			notes = "Recebe no body da requisição uma representação Json do objeto Setor.", //
 			response = SetorDtoSaida.class)
-//	@CacheEvict(allEntries = true, value = "listaSetores")
+	@CacheEvict(allEntries = true, value = "listaSetores")
 	@Transactional
 	@PutMapping
 	public ResponseEntity<SetorDtoSaida> alterarSetor( //
@@ -83,7 +85,7 @@ public class SetorController {
 	@ApiOperation(value = "Exclui um setor.", //
 			notes = "Recebe como PathParam o id do item a ser excluído.", //
 			response = String.class)
-//	@CacheEvict(allEntries = true, value = "listaSetores")
+	@CacheEvict(allEntries = true, value = "listaSetores")
 	@Transactional
 	@DeleteMapping("/{id}")
 	public ResponseEntity<String> excluirSetor(@PathVariable Long id) {

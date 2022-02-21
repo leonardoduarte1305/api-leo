@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(tags = "Abstract Controller")
+@Api(tags = "Root Controller")
 @RequestMapping("/")
 @RestController
 public class RootController {
@@ -17,8 +17,8 @@ public class RootController {
 	@ApiOperation(value = "Verifica se o microsserviço está ativo", code = 200)
 	@GetMapping
 	public String health() {
-		return LocalDateTime.now().toString()
-				+ "\n Acesse api-leo.herokuapp.com/swagger-ui.html, descubra e teste todas as funcionalidades";
+		return LocalDateTime.now().toString() + //
+				"\n Acesse /swagger-ui.html, descubra e teste todas as funcionalidades";
 	}
 
 }

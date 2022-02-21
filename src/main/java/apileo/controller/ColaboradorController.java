@@ -75,7 +75,7 @@ public class ColaboradorController {
 	@ApiOperation(value = "Lista os colaboradores ordenados por setor.", //
 			notes = "Não recebe parâmetros.", //
 			produces = "application/json")
-//	@Cacheable(value = "listaColaboradores")
+	@Cacheable(value = "listaColaboradores")
 	@GetMapping("/todos")
 	public List<ColaboradorDtoSaida> listarColaboradoresOrderBySetor() {
 
@@ -86,7 +86,7 @@ public class ColaboradorController {
 			notes = "Recebe no body da requisição uma representação" //
 					+ " Json do objeto ColaboradorDtoEntrada", //
 			response = ColaboradorDtoSaida.class)
-//	@CacheEvict(allEntries = true, value = "listaColaboradores")
+	@CacheEvict(allEntries = true, value = "listaColaboradores")
 	@Transactional
 	@PostMapping
 	public ResponseEntity<ColaboradorDtoSaida> cadastrarColaborador(@Valid @RequestBody //
@@ -99,7 +99,7 @@ public class ColaboradorController {
 	@ApiOperation(value = "Altera os dados de um colaborador.", //
 			notes = "Recebe no body da requisição uma representação Json do objeto Colaborador.", //
 			response = SetorDtoSaida.class)
-//	@CacheEvict(allEntries = true, value = "listaColaboradores")
+	@CacheEvict(allEntries = true, value = "listaColaboradores")
 	@Transactional
 	@PutMapping
 	public ResponseEntity<ColaboradorDtoSaida> alterarColaborador(@Valid @RequestBody //
@@ -112,7 +112,7 @@ public class ColaboradorController {
 	@ApiOperation(value = "Exclui um colaborador.", //
 			notes = "Recebe como PathParam o id do item a ser excluído.", //
 			response = String.class)
-//	@CacheEvict(allEntries = true, value = "listaColaboradores")
+	@CacheEvict(allEntries = true, value = "listaColaboradores")
 	@Transactional
 	@DeleteMapping("/{id}")
 	public ResponseEntity<String> excluirColaborador(@PathVariable Long id) {

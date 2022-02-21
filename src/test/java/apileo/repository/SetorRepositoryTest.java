@@ -8,7 +8,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import apileo.model.Setor;
-import apileo.repository.SetorRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

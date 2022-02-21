@@ -3,8 +3,6 @@ package apileo.controller;
 import org.junit.Assert;
 import org.junit.Test;
 
-import apileo.controller.RootController;
-
 public class AbstractControllerTest {
 
 	@Test

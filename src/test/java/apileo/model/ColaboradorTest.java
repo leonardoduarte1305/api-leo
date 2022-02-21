@@ -7,9 +7,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import apileo.model.Colaborador;
-import apileo.model.Setor;
-
 @RunWith(MockitoJUnitRunner.class)
 public class ColaboradorTest {
 

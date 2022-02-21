@@ -19,7 +19,7 @@ import apileo.repository.GestorRepository;
 
 @Configuration
 @EnableWebSecurity
-@Profile("producao")
+@Profile("prod")
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Autowired

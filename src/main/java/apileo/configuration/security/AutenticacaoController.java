@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiOperation;
 @Api(tags = "Autenticacao")
 @RestController
 @RequestMapping("/auth")
-@Profile("producao")
+@Profile("prod")
 public class AutenticacaoController {
 
 	@Autowired

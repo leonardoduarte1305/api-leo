@@ -9,13 +9,9 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import apileo.controller.SetorController;
-import apileo.controller.dto.request.SetorDtoEntrada;
-import apileo.controller.dto.response.SetorDtoSaida;
 import apileo.model.Setor;
 import apileo.repository.SetorRepository;
 import apileo.service.SetorService;
