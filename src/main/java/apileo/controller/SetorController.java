@@ -41,7 +41,7 @@ public class SetorController {
 
 	@ApiOperation(value = "Busca um setor por seu id.", //
 			notes = "Recebe como parâmtetro da requisição o id a ser pesquisado", //
-			response = Setor.class, //
+			response = Long.class, //
 			produces = "application/json")
 	@GetMapping("/{id}")
 	public Setor pesquisarSetorPorId(@PathVariable Long id) {
@@ -75,11 +75,12 @@ public class SetorController {
 			response = SetorDtoSaida.class)
 	@CacheEvict(allEntries = true, value = "listaSetores")
 	@Transactional
-	@PutMapping
+	@PutMapping("/{id}")
 	public ResponseEntity<SetorDtoSaida> alterarSetor( //
-			@Valid @RequestBody Setor setor, //
+			@PathVariable Long id, //
+			@Valid @RequestBody SetorDtoEntrada setorDtoEntrada, //
 			UriComponentsBuilder uriBuilder) {
-		return setorService.alterar(setor, uriBuilder);
+		return setorService.alterar(id, setorDtoEntrada, uriBuilder);
 	}
 
 	@ApiOperation(value = "Exclui um setor.", //

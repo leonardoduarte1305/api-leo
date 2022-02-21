@@ -38,13 +38,18 @@ public class SetorService {
 		return ResponseEntity.ok().body("Excluído com sucesso");
 	}
 
-	public ResponseEntity<SetorDtoSaida> alterar(Setor setor, UriComponentsBuilder uriBuilder) {
+	public ResponseEntity<SetorDtoSaida> alterar(Long id, SetorDtoEntrada setorDtoEntrada,
+			UriComponentsBuilder uriBuilder) {
+
+		Setor setor = setorDtoEntrada.toSetor();
+		setor.setIdSetor(id);
+
 		Setor salvo = setorRepository.save(setor);
 		SetorDtoSaida saida = new SetorDtoSaida().toSetorDtoSaida(salvo);
 
 		URI uri = uriBuilder.path("/setor/{id}").buildAndExpand(salvo.getIdSetor()).toUri();
 
-		return ResponseEntity.created(uri).body(saida);
+		return ResponseEntity.ok(saida);
 	}
 
 }

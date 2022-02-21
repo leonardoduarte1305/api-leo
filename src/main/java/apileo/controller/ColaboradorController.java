@@ -89,8 +89,8 @@ public class ColaboradorController {
 	@CacheEvict(allEntries = true, value = "listaColaboradores")
 	@Transactional
 	@PostMapping
-	public ResponseEntity<ColaboradorDtoSaida> cadastrarColaborador(@Valid @RequestBody //
-	ColaboradorDtoEntrada colaboradorDtoEntrada, //
+	public ResponseEntity<ColaboradorDtoSaida> cadastrarColaborador( //
+			@Valid @RequestBody ColaboradorDtoEntrada colaboradorDtoEntrada, //
 			UriComponentsBuilder uriBuilder) {
 
 		return colaboradorService.salvar(colaboradorDtoEntrada, uriBuilder);

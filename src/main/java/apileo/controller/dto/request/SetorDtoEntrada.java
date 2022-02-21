@@ -7,11 +7,12 @@ import javax.validation.constraints.NotNull;
 
 import apileo.model.Setor;
 
-public class SetorDtoEntrada implements Serializable{
+public class SetorDtoEntrada implements Serializable {
 
 	private static final long serialVersionUID = 6223199047516780395L;
-	
-	@NotNull @NotEmpty
+
+	@NotNull
+	@NotEmpty
 	private String descricao;
 
 	public SetorDtoEntrada() {

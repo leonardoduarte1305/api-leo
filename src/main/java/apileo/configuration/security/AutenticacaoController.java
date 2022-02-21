@@ -20,11 +20,12 @@ import io.swagger.annotations.ApiOperation;
 @Api(tags = "Autenticacao")
 @RestController
 @RequestMapping("/auth")
-@Profile("prod")
+@Profile(value = { "prod" })
 public class AutenticacaoController {
 
 	@Autowired
 	private AuthenticationManager authManager;
+
 	@Autowired
 	private TokenService tokenService;
 
@@ -34,9 +35,6 @@ public class AutenticacaoController {
 	public ResponseEntity<TokenDtoSaida> autenticar(@RequestBody @Valid LoginDtoEntrada loginDto) {
 
 		UsernamePasswordAuthenticationToken dadosLogin = loginDto.converter();
-
-		System.out.println(loginDto.getEmail());
-		System.out.println(loginDto.getSenha());
 
 		try {
 			Authentication authentication = authManager.authenticate(dadosLogin);

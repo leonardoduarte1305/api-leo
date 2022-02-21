@@ -26,10 +26,10 @@ public class ColaboradorDtoEntrada implements Serializable {
 	@NotEmpty
 	private String email;
 	private Date dt_nascimento;
-	private Setor setor;
+	private Setor idSetor;
 
 	public Colaborador toColaborador() {
-		return new Colaborador(cpf, nome, telefone, email, dt_nascimento, setor);
+		return new Colaborador(cpf, nome, telefone, email, dt_nascimento, idSetor);
 	}
 
 	public String getCpf() {
@@ -53,7 +53,7 @@ public class ColaboradorDtoEntrada implements Serializable {
 	}
 
 	public Setor getSetor() {
-		return setor;
+		return idSetor;
 	}
 
 	public void setCpf(String cpf) {
@@ -77,7 +77,7 @@ public class ColaboradorDtoEntrada implements Serializable {
 	}
 
 	public void setSetor(Setor setor) {
-		this.setor = setor;
+		this.idSetor = setor;
 	}
 
 }
