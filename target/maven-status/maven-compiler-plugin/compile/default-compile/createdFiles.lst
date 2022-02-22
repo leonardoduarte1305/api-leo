@@ -2,6 +2,7 @@ apileo\controller\dto\response\SetorDtoSaida.class
 apileo\controller\SetorController.class
 apileo\exceptions\BlackListException.class
 apileo\configuration\security\DevSecurityConfiguration.class
+apileo\configuration\springfox\SpringFoxConfig$1.class
 apileo\repository\GestorRepository.class
 apileo\service\VerificaContingentePorEmpresa.class
 apileo\configuration\security\AutenticacaoController.class
@@ -14,8 +15,8 @@ apileo\controller\dto\response\ColaboradorDtoSaida.class
 apileo\ApiLeoApplication.class
 apileo\configuration\redis\RedisConfiguration.class
 apileo\configuration\errors\ErroDeDtoEntrada.class
+apileo\controller\HealthController.class
 apileo\service\VerificaSeEstaNaBlackList.class
-apileo\controller\RootController.class
 apileo\utils\DataUtils.class
 apileo\configuration\errors\ErroDeValidacaoHandler.class
 apileo\exceptions\ContingentePorSetorException.class
@@ -26,12 +27,12 @@ apileo\repository\ColaboradorRepository.class
 apileo\model\Perfil.class
 apileo\configuration\security\AutenticacaoViaTokenFilter.class
 apileo\service\ColaboradorService.class
+apileo\configuration\springfox\SpringFoxConfig.class
 apileo\controller\dto\request\ColaboradorDtoEntrada.class
 apileo\model\Setor.class
 apileo\repository\SetorRepository.class
 apileo\configuration\security\TokenDtoSaida.class
 apileo\service\RestricoesAoRegistro.class
 apileo\service\SetorService.class
-apileo\configuration\swagger\SwaggerConfiguration.class
 apileo\exceptions\ContingentePorEmpresaException.class
 apileo\model\Gestor.class
