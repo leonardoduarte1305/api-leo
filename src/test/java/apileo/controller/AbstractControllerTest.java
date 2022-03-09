@@ -7,7 +7,7 @@ public class AbstractControllerTest {
 
 	@Test
 	public void testaHealth() {
-		RootController controller = new RootController();
+		HealthController controller = new HealthController();
 		Assert.assertNotNull(controller.health());
 	}
 

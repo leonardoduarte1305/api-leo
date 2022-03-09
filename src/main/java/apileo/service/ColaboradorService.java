@@ -103,7 +103,7 @@ public class ColaboradorService {
 	public Page<ColaboradorDtoSaida> trazListaDeColaboradoresComPaginacaoTipoA(int pagina, int qtd, String ordenacao) {
 
 		Pageable paginacao = PageRequest.of(pagina, qtd, Direction.ASC, ordenacao);
-		
+
 		Page<Colaborador> paginaEncontrada = colaboradorRepository.findAll(paginacao);
 
 		return ColaboradorDtoSaida.converterColabEmPageColabDtoSaida(paginaEncontrada);

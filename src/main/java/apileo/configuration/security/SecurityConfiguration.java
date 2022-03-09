@@ -73,7 +73,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				"/swagger-resources/**");
 	}
 
-//	public static void main(String[] args) {
-//		System.out.println(new BCryptPasswordEncoder().encode("senha para codificar"));
-//	}
+	public static void main(String[] args) {
+		System.out.println(new BCryptPasswordEncoder().encode("admin"));
+	}
 }

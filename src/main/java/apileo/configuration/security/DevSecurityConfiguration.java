@@ -11,11 +11,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Profile(value = { "dev", "test" })
 public class DevSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-	@Override // Configurações de autorização
+	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests() //
 				.antMatchers("/**").permitAll() //
-				.and().csrf().disable() //
-		;
+				.and().csrf().disable();
 	}
 }

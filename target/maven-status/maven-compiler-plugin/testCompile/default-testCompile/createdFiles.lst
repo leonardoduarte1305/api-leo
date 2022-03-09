@@ -1,6 +1,0 @@
-apileo\model\ColaboradorTest.class
-apileo\utils\DataUtilsTest.class
-apileo\ApiLeoApplicationTests.class
-apileo\controller\AbstractControllerTest.class
-apileo\repository\SetorRepositoryTest.class
-apileo\controller\SetorControllerTest.class
