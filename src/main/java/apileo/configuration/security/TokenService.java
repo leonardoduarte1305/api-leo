@@ -3,6 +3,7 @@ package apileo.configuration.security;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import apileo.model.Gestor;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-
+@Profile(value = { "prod" })
 @Service
 public class TokenService {
 

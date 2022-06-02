@@ -57,7 +57,7 @@ public class SpringFoxConfig {
 				.build();
 	}
 
-	//@Bean Este Bean trabalha em conjunto com a prop:
+	@Bean // Este Bean trabalha em conjunto com a prop:
 	//spring.mvc.pathmatch.matching-strategy: ant-path-matcher
 	public static BeanPostProcessor springfoxHandlerProviderBeanPostProcessor() {
 		return new BeanPostProcessor() {

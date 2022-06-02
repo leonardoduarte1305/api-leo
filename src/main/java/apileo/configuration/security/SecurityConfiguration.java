@@ -50,6 +50,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				// GERAIS
 				.antMatchers(HttpMethod.GET, "/").permitAll() //
 				.antMatchers(HttpMethod.POST, "/auth").permitAll() //
+				.antMatchers(HttpMethod.POST, "/actuator/**").permitAll() //
 
 				// COLABORADOR
 				.antMatchers(HttpMethod.GET, "/colaborador/**").permitAll() //

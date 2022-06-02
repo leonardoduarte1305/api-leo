@@ -1,3 +1,6 @@
 /target/**
 Docker & Path Variables.txt
-/target/
+.idea
+.project
+.classpath
+target
