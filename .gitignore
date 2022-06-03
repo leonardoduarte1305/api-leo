@@ -3,4 +3,4 @@ Docker & Path Variables.txt
 .idea
 .project
 .classpath
-target
+/target

@@ -1,0 +1,1 @@
+web: java -Xmx512m -Dserver.port=$PORT $JAVA_OPTS -jar api.jar
