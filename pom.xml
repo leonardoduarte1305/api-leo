@@ -29,7 +29,7 @@
 		<docker-maven-plugin.version>0.4.10</docker-maven-plugin.version>
 		<git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
 		<lombok.version>1.18.24</lombok.version>
-		<micrometer-registry-atlas.version>1.9.0</micrometer-registry-atlas.version>
+		<hibernate-micrometer.version>6.1.0.Final</hibernate-micrometer.version>
 	</properties>
 
 	<dependencies>
@@ -91,6 +91,11 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-micrometer</artifactId>
+			<version>${hibernate-micrometer.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
 		</dependency>
@@ -134,11 +139,6 @@
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-registry-atlas</artifactId>
-			<version>${micrometer-registry-atlas.version}</version>
 		</dependency>
 		<!-- SpringFox -->
 		<dependency>
