@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping;
 
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -28,13 +27,7 @@ import springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider;
 @Configuration
 public class SpringFoxConfig {
 
-	/**
-	 * Documentacao para referencia futura:
-	 * https://springfox.github.io/springfox/docs/snapshot/
-	 * 
-	 * @return
-	 */
-
+	//FIXME Migrar para o OpenAPI
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2) //

@@ -1,12 +1,12 @@
-insert into gestor (nome, email, senha) values ('leonardo', 'leo@leo.com', '$2a$10$lB03/m9IKDjBubawgnJ/bucuiq0JYz1.ue6S0KT7pb6zQSagv.Xea');
-insert into gestor (nome, email, senha) values ('admin', 'admin@admin.com', '$2a$10$6GQwJl6/UzkVP8XTA4tLieubclp5g/z30yx69vZAKkOYRcqOVHv8u');
+insert into gestor (nome, email, senha) values ('leonardo', 'leo@leo', '$2a$10$lB03/m9IKDjBubawgnJ/bucuiq0JYz1.ue6S0KT7pb6zQSagv.Xea');
+insert into gestor (nome, email, senha) values ('admin', 'admin@admin', '$2a$10$6GQwJl6/UzkVP8XTA4tLieubclp5g/z30yx69vZAKkOYRcqOVHv8u');
 	
-insert into perfil (id_perfil, nome_perfil) values (1, 'ROLE_MODERADOR');
-insert into perfil (id_perfil, nome_perfil) values (2, 'ROLE_GERENTE');
-insert into perfil (id_perfil, nome_perfil) values (3, 'ROLE_COLABORADOR');
+insert into perfil (id_perfil, nome_perfil) values (1, 'ADMIN');
+insert into perfil (id_perfil, nome_perfil) values (2, 'MODERADOR');
+insert into perfil (id_perfil, nome_perfil) values (3, 'COLABORADOR');
 	
+insert into gestor_perfis (gestor_id_gestor, perfis_id_perfil) values (1, 1);
 insert into gestor_perfis (gestor_id_gestor, perfis_id_perfil) values (2, 2);
-insert into gestor_perfis (gestor_id_gestor, perfis_id_perfil) values (1, 3);
 
 insert into setores (descricao) values ('DevOps');
 insert into setores (descricao) values ('Marketing');
