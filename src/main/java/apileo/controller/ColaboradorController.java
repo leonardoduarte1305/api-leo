@@ -30,6 +30,7 @@ import apileo.controller.dto.response.ColaboradorDtoSaida;
 import apileo.controller.dto.response.SetorDtoSaida;
 import apileo.model.Colaborador;
 import apileo.service.ColaboradorService;
+import io.micrometer.core.annotation.Counted;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -46,6 +47,7 @@ public class ColaboradorController {
 			notes = "Recebe os parâmetros de página atual*, quantidade de itens* e atributo para ordenação."
 					+ "Pode-se ordenar por: cpf, nome, telefone, email, dtNascimento ou dtCadastro", //
 			produces = "application/json")
+	@Counted(value = "colaboradores.count.listarColaboradores")
 	@GetMapping("/paginacaoa")
 	public Page<ColaboradorDtoSaida> listarColaboradores( //
 			@RequestParam int pagina, @RequestParam int qtd, @RequestParam(required = false) String ordenacao) {

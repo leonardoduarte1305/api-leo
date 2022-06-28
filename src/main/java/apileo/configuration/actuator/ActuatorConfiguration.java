@@ -2,11 +2,10 @@ package apileo.configuration.actuator;
 
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.ReactiveHealthIndicator;
-import org.springframework.stereotype.Component;
 
 import reactor.core.publisher.Mono;
 
-@Component
+//@Component
 public class ActuatorConfiguration implements ReactiveHealthIndicator {
 
 	//Para referência futura: https://www.baeldung.com/spring-boot-actuators

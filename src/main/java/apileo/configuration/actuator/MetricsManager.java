@@ -1,33 +1,31 @@
 package apileo.configuration.actuator;
 
-//@Component
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
+import apileo.repository.ColaboradorRepository;
+import io.micrometer.core.aop.CountedAspect;
+import io.micrometer.core.instrument.Gauge;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.binder.MeterBinder;
+
+@Component
 public class MetricsManager {
 
-	//https://www.youtube.com/watch?v=9dXxm3ff4oI
+	@Bean
+	public MeterBinder quantidadeDeColaboradores(ColaboradorRepository repository) {
+		return (meterRegistry) -> {
+			Gauge.builder("colaboradores.qtd", repository::count)
+					.register(meterRegistry);
+		};
+	}
 
-	public static final String METRIC_API = "api-leo";
-	public static final String METRIC_COLABORADOR = "Colaborador";
-	public static final String METRIC_GESTOR = "Gestor";
-	public static final String METRIC_SETOR = "Setor";
+	@Bean
+	public CountedAspect countedAspect(MeterRegistry meterRegistry){
+		return new CountedAspect(meterRegistry);
 
-	/*
-	@Autowired
-	private MeterRegistry meterRegistry;
-	@Autowired
-	private ColaboradorRepository colabRepo;
-
-	@Autowired
-	private GestorRepository gestRepo;
-
-	@Autowired
-	private SetorRepository setorRepo;
-
-	@PostConstruct
-	protected void initialize() {
-		Gauge.builder(METRIC_COLABORADOR, colabRepo, ColaboradorRepository::count).register(meterRegistry);
-
-		Gauge.builder(METRIC_GESTOR, gestRepo, GestorRepository::count).register(meterRegistry);
-
-		Gauge.builder(METRIC_SETOR, setorRepo, SetorRepository::count).register(meterRegistry);
-	}*/
+		//Este Bean gerencia os @Counted da aplicação, um exemplo está abaixo
+		//@Counted(value = "colaboradores.count.listarColaboradores")
+		//https://youtu.be/9dXxm3ff4oI?t=2481
+	}
 }
