@@ -54,7 +54,7 @@
         <connection>scm:git:ssh://github.com/leonardoduarte1305/api-leoFINALIZADA.git</connection>
         <developerConnection>scm:git:ssh://github.com/leonardoduarte1305/api-leoFINALIZADA.git</developerConnection>
         <url>https://github.com/leonardoduarte1305/api-leoFINALIZADA</url>
-        <tag>v2.0.3-RELEASE</tag>
+        <tag>v2.0.4-RELEASE</tag>
     </scm>
 
     <dependencies>
