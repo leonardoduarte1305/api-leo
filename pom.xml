@@ -11,7 +11,7 @@
 
     <groupId>br.dev.leoduarte</groupId>
     <artifactId>api-leo</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>api-leo</name>
@@ -54,7 +54,7 @@
         <connection>scm:git:ssh://github.com/leonardoduarte1305/api-leoFINALIZADA.git</connection>
         <developerConnection>scm:git:git@github.com:leonardoduarte1305/api-leoFINALIZADA.git</developerConnection>
         <url>https://github.com/leonardoduarte1305/api-leoFINALIZADA.git</url>
-        <tag>1.0.1</tag>
+        <tag>1.0.0</tag>
     </scm>
 
     <dependencies>
